@@ -1,23 +1,33 @@
-import { useState} from "react";
+import {useState} from "react";
 
-export default function MyApp() {
+export default function Board() {
+    const [values, setValues] = useState(Array(9).fill(null));
     return (
-        <div>
-            <h1 title={"按钮计数器"} />
-            <MyButton />
-            <MyButton />
-        </div>
+        <>
+            <div className="board-row">
+                <Square value={values[0]} />
+                <Square value={values[1]} />
+                <Square value={values[2]} />
+            </div>
+            <div className="board-row">
+                <Square value={values[3]} />
+                <Square value={values[4]} />
+                <Square value={values[5]} />
+            </div>
+            <div className="board-row">
+                <Square value={values[6]} />
+                <Square value={values[7]} />
+                <Square value={values[8]} />
+            </div>
+        </>
     );
 }
 
-function MyButton () {
-    const [count, setCount] = useState(0);
-    function handleClick() {
-        setCount(count+1);
-    }
+function Square({value}) {
     return (
-        <button onClick={handleClick}>
-            点了{count}次
+        <button className="square" >
+            { value }
         </button>
     );
 }
+
