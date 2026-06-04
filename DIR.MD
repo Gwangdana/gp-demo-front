@@ -1,0 +1,11 @@
+- src/
+  - components/      # 可复用组件
+  - pages/           # 页面组件
+  - hooks/           # 自定义Hooks
+  - context/         # Context相关
+  - reducer/         # Reducer相关
+  - utils/           # 工具函数
+  - types/           # 通用类型定义
+  - App.tsx          # 根组件
+  - main.tsx         # 入门文件
+  - vite-env.d.ts    # TS环境声明文件
