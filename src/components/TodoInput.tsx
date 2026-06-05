@@ -19,7 +19,7 @@ export default function TodoInput({onAdd}: TodoInputProps) {
                    value={inputValue}
                    onChange={(e) => setInputValue(e.target.value)}
             />
-            <button type='submit' title='添加' />
+            <button type='submit'>添加</button>
         </form>
     );
 }

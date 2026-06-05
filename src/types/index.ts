@@ -4,7 +4,7 @@ export interface Todo {
     completed: boolean;
 }
 
-export type filterType = 'all' | 'completed' | 'active';
+export type FilterType = 'all' | 'completed' | 'active';
 
 export interface TodoInputProps {
     onAdd: (text: string) => void;
@@ -18,6 +18,6 @@ export interface TodoItemProps {
 }
 
 export interface TodoFilterProps {
-    filter: filterType;
-    onFilterChange: (filter: string) => void;
+    filter: FilterType;
+    onFilterChange: (filter: FilterType) => void;
 }

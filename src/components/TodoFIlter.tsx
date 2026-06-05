@@ -1,6 +1,6 @@
 import type { TodoFilterProps} from "../types";
 
-export default function TodoFilter( {filter: onFilterChange }: TodoFilterProps) {
+export default function TodoFilter( {filter, onFilterChange }: TodoFilterProps) {
     return (
         <div className="todo-filter">
             <button
