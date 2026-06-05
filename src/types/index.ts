@@ -1,18 +1,23 @@
-export type SquareValue = "X" | "O" | null;
-
-export interface SquareProps {
-    value: SquareValue;
-    onClick : () => void;
-    isWin: boolean;
+export interface Todo {
+    id: number;
+    text: string;
+    completed: boolean;
 }
 
-export interface BoardProps {
-    squares: SquareValue[];
-    onSquareClick: (index: number) => void;
-    winLines: number[];
-    currentStep: number;
+export type filterType = 'all' | 'completed' | 'active';
+
+export interface TodoInputProps {
+    onAdd: (text: string) => void;
 }
 
-export interface HistoryRecord {
-    squares: SquareValue[];
+export interface TodoItemProps {
+    todo: Todo,
+    onDelete: (id: number) => void;
+    onEdit: (id: number, newText: string) => void;
+    onToggle: (id: number) => void;
+}
+
+export interface TodoFilterProps {
+    filter: filterType;
+    onFilterChange: (filter: string) => void;
 }
