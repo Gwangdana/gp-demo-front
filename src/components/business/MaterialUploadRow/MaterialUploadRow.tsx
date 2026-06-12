@@ -35,7 +35,7 @@ const MaterialUploadRow: React.FunctionComponent<MaterialUploadRowProps> = (prop
     } = props;
 
     const [form] = Form.useForm();
-    const [submit_loading, set_submit_loading] = useState<boolean>(true);
+    const [submit_loading, set_submit_loading] = useState<boolean>(false);
     const [has_operate_auth, set_has_operate_auth] = useState<boolean>(false);
 
     useEffect(() => {
@@ -50,7 +50,7 @@ const MaterialUploadRow: React.FunctionComponent<MaterialUploadRowProps> = (prop
 
     const handle_submit = async () => {
         set_submit_loading(true);
-
+        console.log(proj_SD_offer_id+"aa"+isSave);
         try{
             await form.validateFields();
             if(matIds.length === 0) {
